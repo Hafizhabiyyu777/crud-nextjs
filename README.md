@@ -1,6 +1,15 @@
 #Langkah awal inisiasi
-- inisiasi next.js : npx create-next-app@latest
-- 
+- inisiasi next.js : 
+npx create-next-app@latest
+- inisiasi prisma : 
+  "npm install prisma --save-dev after that clear, 
+  "npm install @prisma/client"
+  "npx prisma init"
+
+  jika sudah memasukam schema ketik :
+  "npx prisma generate"
+  "npx prisma db push"
+
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
