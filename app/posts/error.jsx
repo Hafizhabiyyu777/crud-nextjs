@@ -4,7 +4,7 @@ import React from "react";
 const error = () => {
   return (
     <div>
-     there is a data fetching error
+     there is a data fetching error...
     </div>
   )  
 };
