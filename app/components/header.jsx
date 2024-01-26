@@ -19,6 +19,10 @@ const Header = () => {
       label: "FAQ",
       href: "/about/faq",
     },
+    {
+      label: "POST",
+      href: "/posts",
+    },
   ];
 
   return (
