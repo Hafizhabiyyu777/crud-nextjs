@@ -1,13 +1,12 @@
 import Link from "next/link";
 import React from "react";
 
-
-const Home = () => {
+const AboutPage = () => {
   return (
     <div>
-      <h1 className="text-4xl">Home Page</h1>
+      <h1 className="text-4xl">About Page</h1>
       <p className="py-10">
-        Lorem Ipsum is simply dummy text of the printing and typesetting
+        This is our <b>about page</b> is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industry's standard dummy text ever
         since the 1500s, when an unknown printer took a galley of type and
         scrambled it to make a type specimen book. It has survived not only five
@@ -17,11 +16,9 @@ const Home = () => {
         with desktop publishing software like Aldus PageMaker including versions
         of Lorem Ipsum.
       </p>
-
-      <Link href="/about">About Page</Link>
-
+      <Link href="/">Home Page</Link>
     </div>
   );
 };
 
-export default Home;
+export default AboutPage;
