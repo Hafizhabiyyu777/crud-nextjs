@@ -23,6 +23,10 @@ const Header = () => {
       label: "POST",
       href: "/posts",
     },
+    {
+      label: "CRUD",
+      href: "/crud",
+    },
   ];
 
   return (
