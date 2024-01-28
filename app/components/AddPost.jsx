@@ -2,8 +2,12 @@
 import { useState } from "react";
 import Modal from "./Modal";
 import axios from "axios";
+import { useRouter } from "next/navigation";
 
 const AddPost = () => {
+  
+  const router = useRouter();
+  
   const [modalOpen, setModalOpen] = useState(false);
   const [inputs, setInputs] = useState({})
 
@@ -16,6 +20,7 @@ const AddPost = () => {
     }).finally(() => {
       setInputs({});
       setModalOpen(false);
+      router.refresh();
     })
   }
 
