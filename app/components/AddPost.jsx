@@ -1,14 +1,22 @@
 "use client";
-
-import Modal from "./Modal";
 import { useState } from "react";
+import Modal from "./Modal";
+import axios from "axios";
 
 const AddPost = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [inputs, setInputs] = useState({})
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(inputs);
+    axios.post('/api/posts', inputs).then(res => {
+      console.log(res);
+    }).catch(err => {
+      console.log(err);
+    }).finally(() => {
+      setInputs({});
+      setModalOpen(false);
+    })
   }
 
   const handleChange = (e) => {
@@ -41,8 +49,8 @@ const AddPost = () => {
 
           <input
             type="text"
-            name="Description"
-            placeholder="description"
+            name="description"
+            placeholder="Description"
             className="w-full p-2 my-5"
             value={inputs.description || ""}
             onChange={handleChange}
